@@ -1,9 +1,30 @@
-particlesJS.load('particles-js','https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.json')
+// typing animation
 
-const toggle = document.getElementById("theme-toggle")
+const text = "Niraj Mhatre";
+let i = 0;
 
-toggle.onclick = () => {
+function typing(){
 
-document.body.classList.toggle("light")
+if(i < text.length){
+
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,100);
 
 }
+
+}
+
+typing();
+
+
+// dark mode toggle
+
+const toggle = document.getElementById("themeToggle");
+
+toggle.onclick = function(){
+
+document.body.classList.toggle("light-mode");
+
+}
+
